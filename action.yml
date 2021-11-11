@@ -1,0 +1,29 @@
+name: 'Versionion Action'
+description: 'Send data to Versionion repo'
+inputs:
+  github-access-token:
+    description: 'GitHub personal access token'
+    required: true
+  action-type:
+    description: 'Either "add-version" or "add-test-result"'
+    required: true
+  
+  version-component-id:
+    description: 'Id of the component for which new version is added'
+    required: false
+  version-tag:
+    description: 'Version tag (an arbitrary string, but SemVer is preferred)'
+    required: false
+
+  test-setup-id:
+    description: 'Id of the setup for which tests were executed'
+    required: false
+  test-status:
+    description: 'Test status'
+    required: false
+  test-component-version-map:
+    description: 'Stringified JSON object that contains key-values for each "componentId":"versionTag". It must be exhaustive'
+    required: false
+runs:
+  using: 'node12'
+  main: './dist/index.js'

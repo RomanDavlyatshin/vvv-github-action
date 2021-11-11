@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 const { CheckerPlugin } = require('awesome-typescript-loader');
 console.log(process.env.NODE_ENV);
@@ -7,7 +6,7 @@ module.exports = {
   mode: process.env.NODE_ENV,
   target: 'node',
   externals: [nodeExternals()],
-  entry: './src/bin/index.ts',
+  entry: './src/index.ts',
   module: {
     rules: [
       {
@@ -19,7 +18,7 @@ module.exports = {
   },
   devtool: process.env.NODE_ENV === 'development' ? 'eval-source-map' : undefined,
   watch: process.env.NODE_ENV === 'development',
-  plugins: [new CheckerPlugin(), new webpack.BannerPlugin({ banner: '#!/usr/bin/env node', raw: true })],
+  plugins: [new CheckerPlugin()],
   resolve: {
     extensions: ['.ts', '.js'],
   },
