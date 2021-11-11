@@ -60,6 +60,7 @@ async function main() {
           It could be either of the following: ${Object.values(ACTION_TYPES).map(x => `"${x}"`)}`);
     }
   } catch (e) {
+    typeof e === 'object' && console.log(JSON.stringify(e));
     core.setFailed(`ERROR: ${e?.message || `unknown error`}`); // TODO append stack if available
   }
 }
