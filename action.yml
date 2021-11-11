@@ -8,6 +8,16 @@ inputs:
     description: 'Either "add-version" or "add-test-result"'
     required: true
   
+  ledger-repo-url:
+    description: 'URL of repository where ledger.json is/should be stored'
+    required: true
+  ledger-repo-owner: 
+    description: 'GitHub username of the ledger repo owner'
+    required: true
+  ledger-repo-name: 
+    description: 'GitHub ledger repo name'
+    required: true
+
   version-component-id:
     description: 'Id of the component for which new version is added'
     required: false
