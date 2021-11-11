@@ -1,6 +1,6 @@
 {
-  "name": "typescript-cli-boilerplate",
-  "version": "0.0.1",
+  "name": "vvv-github-action",
+  "version": "0.0.2",
   "description": "A boilerplate project to help bootstrapping CLI development with TypeScript",
   "main": "dist/index.js",
   "scripts": {

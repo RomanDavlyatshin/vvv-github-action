@@ -1,11 +1,11 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
+// const nodeExternals = require('webpack-node-externals');
 const { CheckerPlugin } = require('awesome-typescript-loader');
 console.log(process.env.NODE_ENV);
 module.exports = {
   mode: process.env.NODE_ENV,
   target: 'node',
-  externals: [nodeExternals()],
+  // externals: [nodeExternals()],
   entry: './src/index.ts',
   module: {
     rules: [
